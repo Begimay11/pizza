@@ -1,16 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import img1 from "../../../assets/SliderImg/Large.png";
+import img2 from "../../../assets/SliderImg/Large (1).png";
+import img3 from "../../../assets/SliderImg/Large (2).png";
 
 const Slider = () => {
-  const sliderImg = [
-    "https://staticcontent.mypizza.kg/Promotions/COCA-COLA_V_PODAROK/Large.png?hash=7ed60b811ea2ff4b8d928533ea688dde&quot",
-    "",
-  ];
+  const sliderImg = [img2, img1, img3];
+  let [ind, setInd] = useState(0);
+  let classN = "dot";
+
+  function getNext() {
+    if (sliderImg.length - 1 === ind) {
+      ind = -1;
+    }
+    setInd(ind + 1);
+  }
+  function getPrev() {
+    if (ind === 0) {
+      ind = 2;
+    }
+    setInd(ind - 1);
+  }
+  useEffect(() => {
+    const int = setInterval(() => {
+      getNext();
+    }, 3000);
+    return () => clearInterval(int);
+  }, [ind]);
+
   return (
     <div id="slider">
       <div className="container">
         <div className="slider">
-          <h1>jfs</h1>
-          <h2>mdfdskfkds</h2>
+          <div className="img-block">
+            <button onClick={getPrev}>prew</button>
+            <img src={sliderImg[ind]} alt="" />
+            <button onClick={getNext}>next</button>
+          </div>
+          <div className="dots">
+            {sliderImg.map((el, index) => (
+              <div
+                onClick={() => setInd(index)}
+                className={ind === index ? classN + " active" : classN}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
