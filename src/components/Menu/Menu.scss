@@ -1,0 +1,53 @@
+#menu {
+  .menu {
+    .menu-wrap {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      &__block {
+        width: 300px;
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.02);
+        }
+        img {
+          width: 230px;
+          height: 230px;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            transform: scale(1.009);
+          }
+        }
+        h4 {
+          font-size: 24px;
+          font-weight: 400;
+          margin: 10px 0;
+        }
+        p {
+          color: #7a7a7a;
+          font-size: 16px;
+        }
+        &-price {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            letter-spacing: 1px;
+            font-weight: 500;
+            font-size: 22px;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: skyblue;
+            text-decoration-style: dotted;
+          }
+        }
+      }
+    }
+  }
+}
