@@ -4,26 +4,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .img-block {
+      position: relative;
       width: 100%;
-      height: 120px;
+      height: 100%;
       display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 1s ease;
+
+      &:hover .arrows {
+        display: block;
+      }
+      &:hover .arrows1 {
+        display: block;
+      }
+      .arrows {
+        display: none;
+        position: absolute;
+        left: 20px;
+      }
+      .arrows1 {
+        display: none;
+        position: absolute;
+        right: 20px;
+      }
       img {
         width: 100%;
       }
     }
     .dots {
-      margin-top: 100px;
+      margin-top: 10px;
       display: flex;
       gap: 20px;
       .dot {
         width: 10px;
         height: 10px;
         border-radius: 100%;
-        background-color: rgb(201, 43, 43);
+        background-color: black;
       }
       .active {
-        background-color: green;
+        background-color: #f93e03;
       }
     }
   }

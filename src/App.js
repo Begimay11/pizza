@@ -1,12 +1,14 @@
 import "./App.scss";
+import MyRoutes from "./MyRoutes";
+import Header from "./components/Header";
 import Menu from "./components/Menu";
-import Slider from "./pages/Home/Slider";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="app">
-      <Slider />
-      <Menu />
+      <Header />
+      <MyRoutes />
     </div>
   );
 }

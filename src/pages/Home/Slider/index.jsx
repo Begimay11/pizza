@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import img1 from "../../../assets/SliderImg/Large.png";
 import img2 from "../../../assets/SliderImg/Large (1).png";
 import img3 from "../../../assets/SliderImg/Large (2).png";
+import { RiArrowLeftSFill } from "react-icons/ri";
+import { RiArrowRightSFill } from "react-icons/ri";
 
 const Slider = () => {
   const sliderImg = [img2, img1, img3];
@@ -32,10 +34,28 @@ const Slider = () => {
       <div className="container">
         <div className="slider">
           <div className="img-block">
-            <button onClick={getPrev}>prew</button>
-            <img src={sliderImg[ind]} alt="" />
-            <button onClick={getNext}>next</button>
+            <div className="arrows">
+              <RiArrowLeftSFill
+                className="ar1"
+                style={{
+                  fontSize: "60px",
+                  color: "#fff",
+                }}
+                onClick={getPrev}
+              />
+            </div>
+            <img className="img" src={sliderImg[ind]} alt="" />
+            <div className="arrows1">
+              <RiArrowRightSFill
+                style={{
+                  fontSize: "60px",
+                  color: "#fff",
+                }}
+                onClick={getNext}
+              />
+            </div>
           </div>
+
           <div className="dots">
             {sliderImg.map((el, index) => (
               <div

@@ -1,0 +1,86 @@
+#header {
+  padding: 20px 0;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav {
+      display: flex;
+      gap: 20px;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        color: black;
+      }
+      .active {
+        color: #f93e03;
+      }
+    }
+    .phone {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      padding: 4px 3px;
+      height: 80px;
+      gap: 6px;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+      &:hover .hide {
+        display: block;
+      }
+      div {
+        display: flex;
+      }
+      .hide {
+        display: none;
+      }
+    }
+    .account {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      .backet-block {
+        position: relative;
+        cursor: pointer;
+        .count {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background-color: #f93e03;
+          width: 18px;
+          height: 18px;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+      .btns {
+        display: flex;
+        gap: 10px;
+        button {
+          padding: 10px 6px;
+          width: 100px;
+          border-radius: 6px;
+          background-color: #f93e03;
+          color: #fff;
+          transition: 0.3s ease;
+          &:hover {
+            background-color: #f56438;
+            scale: 1.01;
+          }
+        }
+      }
+    }
+  }
+}
