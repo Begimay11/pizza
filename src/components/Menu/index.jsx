@@ -15,8 +15,7 @@ const Menu = () => {
               <center>
                 <img
                   src="https://media.dodostatic.net/image/r:584x584/11EE7D6014AA98A0A02B23B5E9087E2C.webp"
-                                  alt=""
-                                  
+                  alt=""
                 />
               </center>
               <h4>Деревенская </h4>

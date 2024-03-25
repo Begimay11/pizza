@@ -12,12 +12,19 @@
         padding: 10px;
         transition: 0.3s;
         cursor: pointer;
+
         &:hover {
-          transform: scale(1.02);
+          transform: scale(1.01);
           border: 1px solid #f93e03;
         }
         &:hover h4 {
           color: #f93e03;
+          border: 1px solid red;
+          background: #f7ede274;
+
+          h4 {
+            color: red;
+          }
         }
         img {
           width: 230px;
@@ -32,6 +39,7 @@
           font-size: 24px;
           font-weight: 400;
           margin: 10px 0;
+          transition: 0.4s;
         }
         p {
           color: #7a7a7a;
