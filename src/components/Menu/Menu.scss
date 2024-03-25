@@ -15,6 +15,10 @@
 
         &:hover {
           transform: scale(1.01);
+          border: 1px solid #f93e03;
+        }
+        &:hover h4 {
+          color: #f93e03;
           border: 1px solid red;
           background: #f7ede274;
 
