@@ -1,0 +1,11 @@
+#promotion {
+  .promotion {
+    .promotion-wrap {
+      &__block {
+        width: 200px;
+        height: 250px;
+        background: #7a7a7a;
+      }
+    }
+  }
+}
