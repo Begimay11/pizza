@@ -7,6 +7,7 @@ const MyRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/promotion" element={<Promotion />} />
     </Routes>
   );
 };
